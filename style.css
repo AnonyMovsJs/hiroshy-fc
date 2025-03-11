@@ -1,41 +1,62 @@
+/* styles.css */
 body {
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    background: url('foto.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
     padding: 50px;
+    color: white;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo para resaltar el texto */
+    z-index: -1;
 }
 
 .invitation {
-    background: white;
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5);
     animation: fadeIn 1s ease-in-out;
+    max-width: 90%;
+    margin: auto;
 }
 
 .title {
-    color: #ff4081;
-    font-size: 2em;
+    color: #ff0000;
+    font-size: 2.2em;
+    text-shadow: 3px 3px 10px black;
     animation: bounce 2s infinite;
 }
 
 .details, .date, .time, .location {
     font-size: 1.2em;
+    color: white;
 }
 
 .rsvp-btn {
-    background: #ff4081;
+    background: #ff0000;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 1.2em;
-    transition: transform 0.3s;
+    font-size: 1.3em;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5);
 }
 
 .rsvp-btn:hover {
     transform: scale(1.1);
+    background: #d40000;
 }
 
 @keyframes fadeIn {
