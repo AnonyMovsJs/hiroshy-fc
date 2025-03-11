@@ -6,6 +6,11 @@ body {
     text-align: center;
     padding: 50px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
     position: relative;
 }
 
@@ -16,7 +21,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo para resaltar el texto */
+    background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo para resaltar el texto */
     z-index: -1;
 }
 
@@ -26,7 +31,8 @@ body::before {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5);
     animation: fadeIn 1s ease-in-out;
-    max-width: 90%;
+    max-width: 500px;
+    width: 90%;
     margin: auto;
 }
 
@@ -67,4 +73,17 @@ body::before {
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.8em;
+    }
+    .details, .date, .time, .location {
+        font-size: 1em;
+    }
+    .rsvp-btn {
+        font-size: 1.1em;
+        padding: 10px 20px;
+    }
 }
